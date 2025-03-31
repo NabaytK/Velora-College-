@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read/write access to a user's own data only
+    match /users/{userId} {
+      // Users can only read and write their own documents
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      // Access to expenses subcollection
+      match /expenses/{expenseId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Access to AI tips subcollection
+      match /ai_tips/{tipId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+    
+    // Default: deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
