@@ -1,0 +1,71 @@
+mkdir -p velora-college-backend/{app,config,services,utils,tests}
+cd velora-college-backend
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install flask flask-cors python-dotenv firebase-admin openai cryptography
+
+# Create main application files
+touch app/__init__.py
+touch app/routes.py
+touch app/errors.py
+
+# Create configuration files
+touch config/__init__.py
+touch config/settings.py
+
+# Create service modules
+touch services/__init__.py
+touch services/firebase_service.py
+touch services/openai_service.py
+touch services/encryption_service.py
+
+# Create utility modules
+touch utils/__init__.py
+touch utils/validators.py
+touch utils/helpers.py
+
+# Create main application file
+touch main.py
+
+# Create .env file template
+echo "
+# Flask Configuration
+FLASK_APP=main.py
+FLASK_ENV=development
+FLASK_DEBUG=1
+SECRET_KEY=your-secret-key-here
+
+# Firebase Configuration
+FIREBASE_TYPE=service_account
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_PRIVATE_KEY_ID=your-private-key-id
+FIREBASE_PRIVATE_KEY=your-private-key
+FIREBASE_CLIENT_EMAIL=your-client-email
+FIREBASE_CLIENT_ID=your-client-id
+FIREBASE_AUTH_URI=https://accounts.google.com/o/oauth2/auth
+FIREBASE_TOKEN_URI=https://oauth2.googleapis.com/token
+FIREBASE_AUTH_PROVIDER_X509_CERT_URL=https://www.googleapis.com/oauth2/v1/certs
+FIREBASE_CLIENT_X509_CERT_URL=your-client-cert-url
+
+# OpenAI Configuration
+OPENAI_API_KEY=your-openai-api-key
+
+# Encryption
+ENCRYPTION_KEY=your-encryption-key
+" > .env.example
+
+# Create requirements.txt
+echo "
+flask==2.2.3
+flask-cors==3.0.10
+python-dotenv==1.0.0
+firebase-admin==6.1.0
+openai==0.27.4
+cryptography==39.0.2
+" > requirements.txt
+
+echo "Backend project structure created successfully!"
