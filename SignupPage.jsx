@@ -250,112 +250,6 @@ const SignupPage = () => {
     </>
   );
 
-  return (
-    <div className="flex min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50">
-      <div className="m-auto w-full max-w-4xl rounded-xl bg-white p-6 shadow-xl md:p-8 lg:p-12">
-        <div className="flex justify-center">
-          <Link to="/" className="mb-8 inline-block">
-            <Logo />
-          </Link>
-        </div>
-
-        <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Create Your Account</h1>
-          <p className="mt-2 text-gray-600">Join Velora and take control of your financial future.</p>
-        </div>
-
-        {/* Progress bar */}
-        <div className="mb-8">
-          <div className="mb-2 flex justify-between text-xs font-medium text-gray-500">
-            <span className={step >= 1 ? 'text-primary-600' : ''}>Personal Info</span>
-            <span className={step >= 2 ? 'text-primary-600' : ''}>Security</span>
-          </div>
-          <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200">
-            <div 
-              className="h-full rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300"
-              style={{ width: step === 1 ? '50%' : '100%' }}
-            ></div>
-          </div>
-        </div>
-
-        {errors.submit && (
-          <div className="mb-4 rounded-md bg-red-50 p-4">
-            <div className="flex">
-              <div className="shrink-0">
-                <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div className="ml-3">
-                <p className="text-sm text-red-800">{errors.submit}</p>
-              </div>
-            </div>
-          </div>
-        )}
-
-        <form onSubmit={handleSubmit}>
-          {step === 1 ? renderStep1() : renderStep2()}
-
-          <div className="flex justify-between">
-            {step === 2 ? (
-              <button
-                type="button"
-                onClick={handlePrevStep}
-                className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-              >
-                Back
-              </button>
-            ) : (
-              <div></div> {/* Empty div for spacing */}
-            )}
-
-            {step === 1 ? (
-              <button
-                type="button"
-                onClick={handleNextStep}
-                className="rounded-lg bg-gradient-to-r from-primary-600 to-secondary-600 px-4 py-2 text-sm font-medium text-white hover:from-primary-700 hover:to-secondary-700"
-              >
-                Next
-              </button>
-            ) : (
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="rounded-lg bg-gradient-to-r from-primary-600 to-secondary-600 px-4 py-2 text-sm font-medium text-white hover:from-primary-700 hover:to-secondary-700 disabled:opacity-70"
-              >
-                {isLoading ? (
-                  <span className="flex items-center">
-                    <svg className="mr-2 h-4 w-4 animate-spin" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      ></path>
-                    </svg>
-                    Creating Account...
-                  </span>
-                ) : (
-                  'Create Account'
-                )}
-              </button>
-            )}
-          </div>
-        </form>
-
-        <div className="mt-8 text-center text-sm text-gray-600">
-          Already have an account?{' '}
-          <Link to="/login" className="font-medium text-primary-600 hover:text-primary-500">
-            Log In
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default SignupPage;
-
   const renderStep2 = () => (
     <>
       <div className="mb-4">
@@ -474,3 +368,86 @@ export default SignupPage;
       </div>
     </>
   );
+
+  return (
+    <div className="flex min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50">
+      <div className="m-auto w-full max-w-4xl rounded-xl bg-white p-6 shadow-xl md:p-8 lg:p-12">
+        <div className="flex justify-center">
+          <Link to="/" className="mb-8 inline-block">
+            <Logo />
+          </Link>
+        </div>
+
+        <div className="mb-8">
+          <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Create Your Account</h1>
+          <p className="mt-2 text-gray-600">Join Velora and take control of your financial future.</p>
+        </div>
+
+        {/* Progress bar */}
+        <div className="mb-8">
+          <div className="mb-2 flex justify-between text-xs font-medium text-gray-500">
+            <span className={step >= 1 ? 'text-primary-600' : ''}>Personal Info</span>
+            <span className={step >= 2 ? 'text-primary-600' : ''}>Security</span>
+          </div>
+          <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200">
+            <div 
+              className="h-full rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300"
+              style={{ width: step === 1 ? '50%' : '100%' }}
+            ></div>
+          </div>
+        </div>
+
+        {errors.submit && (
+          <div className="mb-4 rounded-md bg-red-50 p-4">
+            <div className="flex">
+              <div className="shrink-0">
+                <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <p className="text-sm text-red-800">{errors.submit}</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit}>
+          {step === 1 ? renderStep1() : renderStep2()}
+
+          <div className="flex justify-between">
+            {step === 2 ? (
+              <button
+                type="button"
+                onClick={handlePrevStep}
+                className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                Back
+              </button>
+            ) : (
+              <div></div> {/* Empty div for spacing */}
+            )}
+
+            {step === 1 ? (
+              <button
+                type="button"
+                onClick={handleNextStep}
+                className="rounded-lg bg-gradient-to-r from-primary-600 to-secondary-600 px-4 py-2 text-sm font-medium text-white hover:from-primary-700 hover:to-secondary-700"
+              >
+                Next
+              </button>
+            ) : (
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="rounded-lg bg-gradient-to-r from-primary-600 to-secondary-600 px-4 py-2 text-sm font-medium text-white hover:from-primary-700 hover:to-secondary-700 disabled:opacity-70"
+              >
+                {isLoading ? (
+                  <span className="flex items-center">
+                    <svg className="mr-2 h-4 w-4 animate-spin" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
