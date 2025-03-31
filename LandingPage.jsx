@@ -30,75 +30,6 @@ const LandingPage = () => {
               Sign Up
             </Link>
           </div>
-
-      {/* CTA Section */}
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="mb-6 text-3xl font-bold text-gray-800 md:text-4xl">
-            Ready to Take Control of Your Finances?
-          </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
-            Join thousands of students who are saving money, finding scholarships, and building their financial future with Velora.
-          </p>
-          <Link
-            to="/signup"
-            className="rounded-lg bg-gradient-to-r from-primary-600 to-secondary-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition-all hover:translate-y-[-2px] hover:shadow-xl"
-          >
-            Get Started For Free
-          </Link>
-          <p className="mt-4 text-sm text-gray-500">
-            No credit card required. Get started in less than 2 minutes.
-          </p>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 py-12 text-white">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-between">
-            <div className="mb-6 w-full md:mb-0 md:w-1/4">
-              <Logo />
-              <p className="mt-4 text-gray-400">
-                Making financial literacy accessible and personalized for all college students.
-              </p>
-            </div>
-            <div className="mb-6 w-full md:mb-0 md:w-1/4">
-              <h3 className="mb-4 text-lg font-semibold">Features</h3>
-              <ul className="space-y-2">
-                <li><Link to="/features" className="text-gray-400 hover:text-white">Budget Tracking</Link></li>
-                <li><Link to="/features" className="text-gray-400 hover:text-white">AI Financial Coach</Link></li>
-                <li><Link to="/features" className="text-gray-400 hover:text-white">Scholarship Finder</Link></li>
-                <li><Link to="/features" className="text-gray-400 hover:text-white">Debt Management</Link></li>
-              </ul>
-            </div>
-            <div className="mb-6 w-full md:mb-0 md:w-1/4">
-              <h3 className="mb-4 text-lg font-semibold">Resources</h3>
-              <ul className="space-y-2">
-                <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
-                <li><Link to="/help" className="text-gray-400 hover:text-white">Help Center</Link></li>
-                <li><Link to="/guides" className="text-gray-400 hover:text-white">Financial Guides</Link></li>
-                <li><Link to="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
-              </ul>
-            </div>
-            <div className="w-full md:w-1/4">
-              <h3 className="mb-4 text-lg font-semibold">Legal</h3>
-              <ul className="space-y-2">
-                <li><Link to="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
-                <li><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
-                <li><Link to="/security" className="text-gray-400 hover:text-white">Security</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-            <p>© {new Date().getFullYear()} Velora. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default LandingPage;
         </div>
       </nav>
 
@@ -242,7 +173,91 @@ export default LandingPage;
                 </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
                   <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
-                </svg>1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-white py-16">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="mb-6 text-3xl font-bold text-gray-800 md:text-4xl">
+            Ready to Take Control of Your Finances?
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
+            Join thousands of students who are saving money, finding scholarships, and building their financial future with Velora.
+          </p>
+          <Link
+            to="/signup"
+            className="rounded-lg bg-gradient-to-r from-primary-600 to-secondary-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition-all hover:translate-y-[-2px] hover:shadow-xl"
+          >
+            Get Started For Free
+          </Link>
+          <p className="mt-4 text-sm text-gray-500">
+            No credit card required. Get started in less than 2 minutes.
+          </p>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 py-12 text-white">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-wrap justify-between">
+            <div className="mb-6 w-full md:mb-0 md:w-1/4">
+              <Logo />
+              <p className="mt-4 text-gray-400">
+                Making financial literacy accessible and personalized for all college students.
+              </p>
+            </div>
+            <div className="mb-6 w-full md:mb-0 md:w-1/4">
+              <h3 className="mb-4 text-lg font-semibold">Features</h3>
+              <ul className="space-y-2">
+                <li><Link to="/features" className="text-gray-400 hover:text-white">Budget Tracking</Link></li>
+                <li><Link to="/features" className="text-gray-400 hover:text-white">AI Financial Coach</Link></li>
+                <li><Link to="/features" className="text-gray-400 hover:text-white">Scholarship Finder</Link></li>
+                <li><Link to="/features" className="text-gray-400 hover:text-white">Debt Management</Link></li>
+              </ul>
+            </div>
+            <div className="mb-6 w-full md:mb-0 md:w-1/4">
+              <h3 className="mb-4 text-lg font-semibold">Resources</h3>
+              <ul className="space-y-2">
+                <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
+                <li><Link to="/help" className="text-gray-400 hover:text-white">Help Center</Link></li>
+                <li><Link to="/guides" className="text-gray-400 hover:text-white">Financial Guides</Link></li>
+                <li><Link to="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
+              </ul>
+            </div>
+            <div className="w-full md:w-1/4">
+              <h3 className="mb-4 text-lg font-semibold">Legal</h3>
+              <ul className="space-y-2">
+                <li><Link to="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
+                <li><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
+                <li><Link to="/security" className="text-gray-400 hover:text-white">Security</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+            <p>© {new Date().getFullYear()} Velora. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default LandingPage; fill="currentColor" className="h-5 w-5">
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
                 </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
                   <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
@@ -251,4 +266,60 @@ export default LandingPage;
                   <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
                 </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            
+            {/* Testimonial 2 */}
+            <div className="rounded-xl bg-white p-6 shadow-md">
+              <div className="mb-4 flex items-center">
+                <div className="h-12 w-12 rounded-full bg-secondary-200 text-center text-xl font-bold leading-loose text-secondary-700">
+                  M
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-semibold text-gray-800">Miguel R.</h4>
+                  <p className="text-sm text-gray-600">Junior, NYU</p>
+                </div>
+              </div>
+              <p className="text-gray-600">
+                "The AI financial advice is surprisingly helpful. It suggested a side hustle that fits perfectly with my schedule and now I'm making an extra $200 a month!"
+              </p>
+              <div className="mt-4 flex text-yellow-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            
+            {/* Testimonial 3 */}
+            <div className="rounded-xl bg-white p-6 shadow-md">
+              <div className="mb-4 flex items-center">
+                <div className="h-12 w-12 rounded-full bg-accent-200 text-center text-xl font-bold leading-loose text-accent-700">
+                  A
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-semibold text-gray-800">Alex W.</h4>
+                  <p className="text-sm text-gray-600">Freshman, UT Austin</p>
+                </div>
+              </div>
+              <p className="text-gray-600">
+                "As a first year student, I was completely lost when it came to managing my loans. Velora broke it down for me and helped me create a plan that actually makes sense."
+              </p>
+              <div className="mt-4 flex text-yellow-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                  <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
